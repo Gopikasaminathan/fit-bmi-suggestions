@@ -12,6 +12,7 @@ import BMIInput from "./pages/BMIInput";
 import BMIResult from "./pages/BMIResult";
 import DietExercise from "./pages/DietExercise";
 import History from "./pages/History";
+import Notifications from "./pages/Notifications";
 
 const queryClient = new QueryClient();
 
