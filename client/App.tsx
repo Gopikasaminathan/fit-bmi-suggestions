@@ -28,6 +28,7 @@ const App = () => (
           <Route path="/bmi-result" element={<BMIResult />} />
           <Route path="/diet-exercise" element={<DietExercise />} />
           <Route path="/history" element={<History />} />
+          <Route path="/notifications" element={<Notifications />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
