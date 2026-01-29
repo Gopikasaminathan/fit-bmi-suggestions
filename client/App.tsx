@@ -8,6 +8,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import BMIInput from "./pages/BMIInput";
+import BMIResult from "./pages/BMIResult";
+import DietExercise from "./pages/DietExercise";
+import History from "./pages/History";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +23,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/bmi-input" element={<BMIInput />} />
+          <Route path="/bmi-result" element={<BMIResult />} />
+          <Route path="/diet-exercise" element={<DietExercise />} />
+          <Route path="/history" element={<History />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
