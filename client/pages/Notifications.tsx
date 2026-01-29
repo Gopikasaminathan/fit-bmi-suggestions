@@ -59,7 +59,7 @@ export default function Notifications() {
     },
     {
       id: "hydrationReminder" as const,
-      icon: Water,
+      icon: Droplets,
       title: "Hydration Reminder",
       description: "Stay hydrated throughout the day",
       time: "Every 3 hours",
