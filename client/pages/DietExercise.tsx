@@ -1,5 +1,14 @@
 import { useNavigate } from "react-router-dom";
-import { ChevronLeft, Apple, Dumbbell, Lightbulb, Droplets, Moon, Wind, Flame } from "lucide-react";
+import {
+  ChevronLeft,
+  Apple,
+  Dumbbell,
+  Lightbulb,
+  Droplets,
+  Moon,
+  Wind,
+  Flame,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function DietExercise() {
@@ -9,24 +18,26 @@ export default function DietExercise() {
     {
       icon: Apple,
       title: "Balanced Nutrition",
-      description: "Include lean proteins, whole grains, fruits, and vegetables in your daily diet.",
+      description:
+        "Include lean proteins, whole grains, fruits, and vegetables in your daily diet.",
       details: [
         "Eat proteins at every meal",
         "Choose whole grains over refined carbs",
         "Fill half your plate with vegetables",
-        "Limit sugar and processed foods"
-      ]
+        "Limit sugar and processed foods",
+      ],
     },
     {
       icon: Dumbbell,
       title: "Regular Exercise",
-      description: "Aim for 150 minutes of moderate-intensity activity per week.",
+      description:
+        "Aim for 150 minutes of moderate-intensity activity per week.",
       details: [
         "30 minutes daily walking is ideal",
         "Strength training 2-3 times a week",
         "Mix cardio with flexibility exercises",
-        "Start small and build gradually"
-      ]
+        "Start small and build gradually",
+      ],
     },
     {
       icon: Droplets,
@@ -36,8 +47,8 @@ export default function DietExercise() {
         "Drink 8-10 glasses of water daily",
         "Drink water before, during, after exercise",
         "Limit sugary drinks and alcohol",
-        "Monitor urine color for hydration"
-      ]
+        "Monitor urine color for hydration",
+      ],
     },
   ];
 
@@ -45,7 +56,8 @@ export default function DietExercise() {
     {
       icon: Moon,
       title: "Quality Sleep",
-      description: "7-9 hours of quality sleep is essential for health and metabolism.",
+      description:
+        "7-9 hours of quality sleep is essential for health and metabolism.",
       color: "secondary",
     },
     {
@@ -150,7 +162,9 @@ export default function DietExercise() {
                   <div className="flex gap-3 mb-3">
                     <div
                       className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: `hsla(var(--${tip.color}), 0.1)` }}
+                      style={{
+                        backgroundColor: `hsla(var(--${tip.color}), 0.1)`,
+                      }}
                     >
                       <Icon
                         className="w-5 h-5"
@@ -174,23 +188,53 @@ export default function DietExercise() {
 
         {/* Daily routine suggestion */}
         <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border-2 border-primary/20 rounded-2xl p-6 mb-8">
-          <h3 className="font-semibold text-foreground mb-4">Suggested Daily Routine</h3>
+          <h3 className="font-semibold text-foreground mb-4">
+            Suggested Daily Routine
+          </h3>
           <div className="space-y-3 text-sm">
             <div className="flex gap-3 items-start">
-              <span className="bg-primary/20 text-primary rounded-full w-7 h-7 flex items-center justify-center font-semibold flex-shrink-0">1</span>
-              <div><p className="font-medium text-foreground">Morning: 7:00 AM</p><p className="text-muted-foreground">Hydrate, breakfast, light stretching</p></div>
+              <span className="bg-primary/20 text-primary rounded-full w-7 h-7 flex items-center justify-center font-semibold flex-shrink-0">
+                1
+              </span>
+              <div>
+                <p className="font-medium text-foreground">Morning: 7:00 AM</p>
+                <p className="text-muted-foreground">
+                  Hydrate, breakfast, light stretching
+                </p>
+              </div>
             </div>
             <div className="flex gap-3 items-start">
-              <span className="bg-primary/20 text-primary rounded-full w-7 h-7 flex items-center justify-center font-semibold flex-shrink-0">2</span>
-              <div><p className="font-medium text-foreground">Afternoon: 12:00 PM</p><p className="text-muted-foreground">Balanced lunch, 1-hour activity</p></div>
+              <span className="bg-primary/20 text-primary rounded-full w-7 h-7 flex items-center justify-center font-semibold flex-shrink-0">
+                2
+              </span>
+              <div>
+                <p className="font-medium text-foreground">
+                  Afternoon: 12:00 PM
+                </p>
+                <p className="text-muted-foreground">
+                  Balanced lunch, 1-hour activity
+                </p>
+              </div>
             </div>
             <div className="flex gap-3 items-start">
-              <span className="bg-primary/20 text-primary rounded-full w-7 h-7 flex items-center justify-center font-semibold flex-shrink-0">3</span>
-              <div><p className="font-medium text-foreground">Evening: 6:00 PM</p><p className="text-muted-foreground">Exercise, healthy dinner</p></div>
+              <span className="bg-primary/20 text-primary rounded-full w-7 h-7 flex items-center justify-center font-semibold flex-shrink-0">
+                3
+              </span>
+              <div>
+                <p className="font-medium text-foreground">Evening: 6:00 PM</p>
+                <p className="text-muted-foreground">
+                  Exercise, healthy dinner
+                </p>
+              </div>
             </div>
             <div className="flex gap-3 items-start">
-              <span className="bg-primary/20 text-primary rounded-full w-7 h-7 flex items-center justify-center font-semibold flex-shrink-0">4</span>
-              <div><p className="font-medium text-foreground">Night: 10:00 PM</p><p className="text-muted-foreground">Relax, sleep 7-9 hours</p></div>
+              <span className="bg-primary/20 text-primary rounded-full w-7 h-7 flex items-center justify-center font-semibold flex-shrink-0">
+                4
+              </span>
+              <div>
+                <p className="font-medium text-foreground">Night: 10:00 PM</p>
+                <p className="text-muted-foreground">Relax, sleep 7-9 hours</p>
+              </div>
             </div>
           </div>
         </div>

@@ -28,13 +28,13 @@ export default function History() {
 
   useEffect(() => {
     const storedRecords = JSON.parse(
-      localStorage.getItem("bmiRecords") || "[]"
+      localStorage.getItem("bmiRecords") || "[]",
     );
     // Sort by timestamp, newest first
     setRecords(
       storedRecords.sort(
-        (a: BMIRecord, b: BMIRecord) => b.timestamp - a.timestamp
-      )
+        (a: BMIRecord, b: BMIRecord) => b.timestamp - a.timestamp,
+      ),
     );
   }, []);
 

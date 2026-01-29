@@ -32,7 +32,8 @@ export default function Index() {
             Assistant
           </h1>
           <p className="text-muted-foreground text-base md:text-lg">
-            Your personal health guide. Track, understand, and improve your wellness journey.
+            Your personal health guide. Track, understand, and improve your
+            wellness journey.
           </p>
         </div>
 

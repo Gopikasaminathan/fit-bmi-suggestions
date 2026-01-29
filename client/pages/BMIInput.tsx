@@ -150,7 +150,10 @@ export default function BMIInput() {
                   style={
                     gender === g
                       ? {
-                          borderColor: g === "male" ? "hsl(var(--primary))" : "hsl(var(--secondary))",
+                          borderColor:
+                            g === "male"
+                              ? "hsl(var(--primary))"
+                              : "hsl(var(--secondary))",
                           backgroundColor:
                             g === "male"
                               ? "hsla(var(--primary), 0.1)"

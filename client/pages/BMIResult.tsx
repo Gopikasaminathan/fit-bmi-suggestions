@@ -16,10 +16,41 @@ interface BMIRecord {
 }
 
 function getBMICategory(bmi: number) {
-  if (bmi < 18.5) return { category: "Underweight", color: "info", bg: "bg-info/10", border: "border-info", emoji: "⚖️", advice: "Focus on healthy weight gain with balanced nutrition" };
-  if (bmi < 25) return { category: "Normal Weight", color: "success", bg: "bg-success/10", border: "border-success", emoji: "✅", advice: "Great! Maintain your healthy lifestyle" };
-  if (bmi < 30) return { category: "Overweight", color: "warning", bg: "bg-warning/10", border: "border-warning", emoji: "⚠️", advice: "Consider increasing physical activity and balanced diet" };
-  return { category: "Obese", color: "danger", bg: "bg-danger/10", border: "border-danger", emoji: "🔴", advice: "Consult with a healthcare professional for a personalized plan" };
+  if (bmi < 18.5)
+    return {
+      category: "Underweight",
+      color: "info",
+      bg: "bg-info/10",
+      border: "border-info",
+      emoji: "⚖️",
+      advice: "Focus on healthy weight gain with balanced nutrition",
+    };
+  if (bmi < 25)
+    return {
+      category: "Normal Weight",
+      color: "success",
+      bg: "bg-success/10",
+      border: "border-success",
+      emoji: "✅",
+      advice: "Great! Maintain your healthy lifestyle",
+    };
+  if (bmi < 30)
+    return {
+      category: "Overweight",
+      color: "warning",
+      bg: "bg-warning/10",
+      border: "border-warning",
+      emoji: "⚠️",
+      advice: "Consider increasing physical activity and balanced diet",
+    };
+  return {
+    category: "Obese",
+    color: "danger",
+    bg: "bg-danger/10",
+    border: "border-danger",
+    emoji: "🔴",
+    advice: "Consult with a healthcare professional for a personalized plan",
+  };
 }
 
 export default function BMIResult() {
@@ -29,7 +60,7 @@ export default function BMIResult() {
 
   const bmiInfo = useMemo(
     () => (record ? getBMICategory(record.bmi) : null),
-    [record]
+    [record],
   );
 
   if (!record || !bmiInfo) {
@@ -76,7 +107,9 @@ export default function BMIResult() {
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-border mb-6">
           <div className="flex justify-between items-start">
             <div>
-              <h2 className="text-2xl font-bold text-foreground">{record.name}</h2>
+              <h2 className="text-2xl font-bold text-foreground">
+                {record.name}
+              </h2>
               <p className="text-muted-foreground text-sm mt-1">
                 {record.age} years old • {record.gender}
               </p>
@@ -108,7 +141,9 @@ export default function BMIResult() {
           <p className="text-muted-foreground text-sm font-semibold uppercase mb-2">
             Your BMI
           </p>
-          <p className="text-7xl font-bold text-foreground mb-3">{record.bmi}</p>
+          <p className="text-7xl font-bold text-foreground mb-3">
+            {record.bmi}
+          </p>
           <p className="text-sm text-muted-foreground">kg/m²</p>
         </div>
 

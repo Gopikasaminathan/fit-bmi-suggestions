@@ -1,5 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { ChevronLeft, Bell, Clock, Zap, Droplets, Moon, Utensils } from "lucide-react";
+import {
+  ChevronLeft,
+  Bell,
+  Clock,
+  Zap,
+  Droplets,
+  Moon,
+  Utensils,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -30,7 +38,10 @@ export default function Notifications() {
 
   const savePreferences = (newPreferences: NotificationPreference) => {
     setPreferences(newPreferences);
-    localStorage.setItem("notificationPreferences", JSON.stringify(newPreferences));
+    localStorage.setItem(
+      "notificationPreferences",
+      JSON.stringify(newPreferences),
+    );
   };
 
   const togglePreference = (key: keyof NotificationPreference) => {
@@ -45,7 +56,8 @@ export default function Notifications() {
       title: "Morning Health Check",
       description: "Start your day with a healthy reminder",
       time: "08:00 AM",
-      message: "Good morning! ☀️ Time for a healthy breakfast and to log your health metrics.",
+      message:
+        "Good morning! ☀️ Time for a healthy breakfast and to log your health metrics.",
       color: "primary",
     },
     {
@@ -54,7 +66,8 @@ export default function Notifications() {
       title: "Evening Wellness",
       description: "Reflect on your daily health progress",
       time: "07:00 PM",
-      message: "How was your day? 📊 Log your current weight and track your progress.",
+      message:
+        "How was your day? 📊 Log your current weight and track your progress.",
       color: "secondary",
     },
     {
@@ -63,7 +76,8 @@ export default function Notifications() {
       title: "Hydration Reminder",
       description: "Stay hydrated throughout the day",
       time: "Every 3 hours",
-      message: "💧 Remember to drink water! Proper hydration is key to good health.",
+      message:
+        "💧 Remember to drink water! Proper hydration is key to good health.",
       color: "info",
     },
     {
@@ -72,7 +86,8 @@ export default function Notifications() {
       title: "Exercise Time",
       description: "Get moving and stay active",
       time: "06:00 PM",
-      message: "⚡ Time to exercise! Even a 15-minute walk helps. You've got this!",
+      message:
+        "⚡ Time to exercise! Even a 15-minute walk helps. You've got this!",
       color: "success",
     },
     {
@@ -81,7 +96,8 @@ export default function Notifications() {
       title: "Bedtime Reminder",
       description: "Maintain a healthy sleep schedule",
       time: "10:00 PM",
-      message: "🌙 Time for bed! Quality sleep is essential for your health and metabolism.",
+      message:
+        "🌙 Time for bed! Quality sleep is essential for your health and metabolism.",
       color: "warning",
     },
   ];
@@ -120,7 +136,9 @@ export default function Notifications() {
               <p className="text-sm font-semibold text-muted-foreground uppercase">
                 Active Reminders
               </p>
-              <p className="text-3xl font-bold text-foreground">{activeReminders}</p>
+              <p className="text-3xl font-bold text-foreground">
+                {activeReminders}
+              </p>
             </div>
             <Bell className="w-12 h-12 text-primary/40" />
           </div>
@@ -165,13 +183,17 @@ export default function Notifications() {
                       }`}
                       style={
                         isActive
-                          ? { backgroundColor: `hsla(var(--${option.color}), 0.1)` }
+                          ? {
+                              backgroundColor: `hsla(var(--${option.color}), 0.1)`,
+                            }
                           : undefined
                       }
                     >
                       <Icon
                         className={`w-6 h-6 transition-all ${
-                          isActive ? `text-${option.color}` : "text-muted-foreground"
+                          isActive
+                            ? `text-${option.color}`
+                            : "text-muted-foreground"
                         }`}
                         style={
                           isActive
@@ -199,7 +221,9 @@ export default function Notifications() {
                           }`}
                           style={
                             isActive
-                              ? { backgroundColor: `hsl(var(--${option.color}))` }
+                              ? {
+                                  backgroundColor: `hsl(var(--${option.color}))`,
+                                }
                               : undefined
                           }
                         >
@@ -235,18 +259,20 @@ export default function Notifications() {
         <div className="bg-gradient-to-br from-success/10 to-success/5 border-2 border-success/30 rounded-2xl p-6 mb-8">
           <div className="text-center">
             <p className="text-2xl mb-2">💪</p>
-            <h3 className="font-bold text-foreground mb-2">
-              Stay Consistent!
-            </h3>
+            <h3 className="font-bold text-foreground mb-2">Stay Consistent!</h3>
             <p className="text-sm text-muted-foreground">
-              Regular reminders help you build healthy habits. Enable notifications to get daily motivation and health tips delivered to your device.
+              Regular reminders help you build healthy habits. Enable
+              notifications to get daily motivation and health tips delivered to
+              your device.
             </p>
           </div>
         </div>
 
         {/* Info section */}
         <div className="bg-secondary/5 border-2 border-secondary/30 rounded-2xl p-6 mb-8">
-          <h3 className="font-semibold text-foreground mb-3">How Reminders Help</h3>
+          <h3 className="font-semibold text-foreground mb-3">
+            How Reminders Help
+          </h3>
           <ul className="space-y-2 text-sm text-foreground">
             <li className="flex gap-2">
               <span className="text-secondary font-bold">✓</span>
