@@ -181,6 +181,12 @@ export default function BMIResult() {
             <ArrowRight className="w-5 h-5" />
           </button>
           <button
+            onClick={() => navigate("/notifications")}
+            className="w-full py-3 px-6 rounded-2xl border-2 border-primary/30 text-foreground font-semibold hover:bg-primary/5 transition-all"
+          >
+            Set Health Reminders
+          </button>
+          <button
             onClick={() => navigate("/history")}
             className="w-full py-3 px-6 rounded-2xl border-2 border-border text-foreground font-semibold hover:bg-muted transition-all"
           >
@@ -188,7 +194,7 @@ export default function BMIResult() {
           </button>
           <Link
             to="/bmi-input"
-            className="w-full block text-center py-3 px-6 rounded-2xl border-2 border-primary/20 text-foreground font-semibold hover:bg-primary/5 transition-all"
+            className="w-full block text-center py-3 px-6 rounded-2xl border-2 border-border text-foreground font-semibold hover:bg-muted transition-all"
           >
             New Calculation
           </Link>
