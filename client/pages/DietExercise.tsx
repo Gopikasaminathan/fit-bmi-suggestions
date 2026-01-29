@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ChevronLeft, Apple, Dumbbell, Lightbulb } from "lucide-react";
+import { ChevronLeft, Apple, Dumbbell, Lightbulb, Droplets, Moon, Wind, Flame } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function DietExercise() {
@@ -10,16 +10,55 @@ export default function DietExercise() {
       icon: Apple,
       title: "Balanced Nutrition",
       description: "Include lean proteins, whole grains, fruits, and vegetables in your daily diet.",
+      details: [
+        "Eat proteins at every meal",
+        "Choose whole grains over refined carbs",
+        "Fill half your plate with vegetables",
+        "Limit sugar and processed foods"
+      ]
     },
     {
       icon: Dumbbell,
       title: "Regular Exercise",
       description: "Aim for 150 minutes of moderate-intensity activity per week.",
+      details: [
+        "30 minutes daily walking is ideal",
+        "Strength training 2-3 times a week",
+        "Mix cardio with flexibility exercises",
+        "Start small and build gradually"
+      ]
     },
     {
-      icon: Lightbulb,
+      icon: Droplets,
       title: "Hydration",
       description: "Drink plenty of water throughout the day to stay hydrated.",
+      details: [
+        "Drink 8-10 glasses of water daily",
+        "Drink water before, during, after exercise",
+        "Limit sugary drinks and alcohol",
+        "Monitor urine color for hydration"
+      ]
+    },
+  ];
+
+  const lifestyleTips = [
+    {
+      icon: Moon,
+      title: "Quality Sleep",
+      description: "7-9 hours of quality sleep is essential for health and metabolism.",
+      color: "secondary",
+    },
+    {
+      icon: Wind,
+      title: "Stress Management",
+      description: "Practice meditation, yoga, or deep breathing daily.",
+      color: "primary",
+    },
+    {
+      icon: Flame,
+      title: "Metabolism Boost",
+      description: "Increase physical activity and eat protein-rich foods.",
+      color: "warning",
     },
   ];
 
