@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ChevronLeft, Bell, Clock, Zap, Water, Moon, Utensils } from "lucide-react";
+import { ChevronLeft, Bell, Clock, Zap, Droplets, Moon, Utensils } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
