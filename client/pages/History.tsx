@@ -199,6 +199,12 @@ export default function History() {
             New Calculation
           </Link>
           <Link
+            to="/notifications"
+            className="w-full block text-center py-3 px-6 rounded-2xl border-2 border-primary/30 text-foreground font-semibold hover:bg-primary/5 transition-all"
+          >
+            Set Health Reminders
+          </Link>
+          <Link
             to="/"
             className="w-full block text-center py-3 px-6 rounded-2xl border-2 border-border text-foreground font-semibold hover:bg-muted transition-all"
           >
